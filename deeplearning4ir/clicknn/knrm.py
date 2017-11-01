@@ -139,7 +139,7 @@ class Knrm(ClickNN):
         # return some mid result and final matching score.
         return (sim, feats_flat), o
 
-    def train(self, train_pair_file_path, val_pair_file_path, train_size, checkpoint_dir, load_model=False, test_point_file_path=None, test_size=0):
+    def train(self, train_pair_file_path, val_pair_file_path, train_size, checkpoint_dir, load_model=False):
 
         # PLACEHOLDERS
         # This is where training samples and labels are fed to the graph.
@@ -358,7 +358,7 @@ if __name__ == '__main__':
     parser.add_argument("--test_size", type=int, default=0)
     parser.add_argument("--output_score_file", '-o')
     parser.add_argument("--emb_file_path", '-e')
-    parser.add_argument("--checkpoint_dir", '-s', help="store data from here")
+    parser.add_argument("--checkpoint_dir", '-s', help="store data to here")
 
     args = parser.parse_args()
 
@@ -370,9 +370,7 @@ if __name__ == '__main__':
                  val_pair_file_path=args.validation_file,
                  train_size=args.train_size,
                  checkpoint_dir=args.checkpoint_dir,
-                 load_model=args.load_model,
-                 test_point_file_path=args.test_file,
-                 test_size=args.test_size)
+                 load_model=args.load_model)
     else:
         nn = Knrm(config=conf)
         nn.test(test_point_file_path=args.test_file,

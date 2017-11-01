@@ -12,9 +12,34 @@ First, configure the model through the config file.
 
 [Sample config](https://github.com/AdeDZY/KNRM/blob/master/sogou.knrm.config)
 
-Then, pass the config file, training and validation data through the command:
+Training: pass the config file, training and validation data to
+```
+python ./deeplearning4ir/clicknn/knrm.py config-file\
+    --train \
+    --train_file: path to training data\
+    --validation_file: path to validation data\
+    --train_size: size of training data (number of training samples)\
+    --checkpoint_dir: directory to store/load model checkpoints\ 
+    --load_model: True or False. Start with a new model or continue training
+```
 
 [Sample shell scripts](https://github.com/AdeDZY/KNRM/blob/master/train-sogou-knrm.sh)
+
+Testing: pass the config file and testing data to:
+```
+python ./deeplearning4ir/clicknn/knrm.py config-file\
+    --test \
+    --test_file: path to testing data\
+    --test_size: size of testing data (number of testing samples)\
+    --checkpoint_dir: directory to load trained model\
+    --output_score_file: file to output documents score\
+
+```
+Relevance scores will be output to output_score_file, one score per line, in the same order as test_file.
+We provide tools to convert score into trec format in.
+```
+python ./tools/gen_trec_from_score
+```
 
 ### Data Format
 ---
