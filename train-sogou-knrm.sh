@@ -1,0 +1,1 @@
+python ./deeplearning4ir/clicknn/knrm.py sogou.knrm.config --train -f ../data1/train-dev/pad-title-url/train.DCTR.pairs.hashed.shuf -v ../data1/train-dev/pad-title-url/dev.pairs.hashed.shuf -z 8553124 -s ./output/test/  --test_file /workplace/data1/train-dev/pad-title-url/test.hashed --test_size 30498
