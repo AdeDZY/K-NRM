@@ -13,7 +13,7 @@ First, configure the model through the config file.
 [Sample config](https://github.com/AdeDZY/KNRM/blob/master/sogou.knrm.config)
 
 Training: pass the config file, training and validation data to
-```
+```ruby
 python ./deeplearning4ir/clicknn/knrm.py config-file\
     --train \
     --train_file: path to training data\
@@ -26,7 +26,7 @@ python ./deeplearning4ir/clicknn/knrm.py config-file\
 [Sample shell scripts](https://github.com/AdeDZY/KNRM/blob/master/train-sogou-knrm.sh)
 
 Testing: pass the config file and testing data to:
-```
+```ruby
 python ./deeplearning4ir/clicknn/knrm.py config-file\
     --test \
     --test_file: path to testing data\
@@ -37,11 +37,11 @@ python ./deeplearning4ir/clicknn/knrm.py config-file\
 ```
 Relevance scores will be output to output_score_file, one score per line, in the same order as test_file.
 We provide tools to convert score into trec format in.
-```
+```ruby
 python ./tools/gen_trec_from_score
 ```
 
-### Data Format
+### Data Preperation
 ---
 1. All queries and documents should be hashed into sequences of integer term ids.
 2. Each training sample is a tuple of (query, postive document, negative documents)
