@@ -2,6 +2,16 @@
 ---
 This is the implementation of the paper [End-to-End Neural Ad-hoc Ranking with Kernel Pooling](http://www.cs.cmu.edu/~zhuyund/papers/end-end-neural.pdf).
 
+If you use this code for your scientific work, please cite it as:
+
+```
+C. Xiong, Z. Dai, J. Callan, Z. Liu, and R. Power. End-to-end neural ad-hoc ranking with kernel pooling. 
+In Proceedings of the 40th International ACM SIGIR Conference on Research & Development in Information Retrieval. 
+ACM. 2017.
+```
+[bibtex](#cite-the-paper)
+
+
 ### Requirements
 ---
 - Tensorflow 0.12
@@ -111,8 +121,13 @@ In training, it takes about 60ms to preprocess a batch on a single-GPU machine w
 
 Smaller vocabulary and shorter documents accelerate the training.
 
+### Cite the paper
 ---
-If you use this code for academic purposes, please cite it as:
+If you use this code for your scientific work, please cite it as:
+
+```
+C. Xiong, Z. Dai, J. Callan, Z. Liu, and R. Power. End-to-end neural ad-hoc ranking with kernel pooling. In Proceedings of the 40th International ACM SIGIR Conference on Research & Development in Information Retrieval. ACM. 2017.
+```
 
 ```
 @inproceedings{xiong2017neural,
