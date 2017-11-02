@@ -82,7 +82,8 @@ class ClickDataGenerator(Configurable):
         self.m_title_pool = np.array(None)
         if self.load_litle_pool and self.neg_sample:
             self._load_title_pool()
-        print self.min_score_diff
+        print "min_score_diff: ", self.min_score_diff
+        print "generator's vocabulary size: ", self.vocabulary_size
 
     def _load_title_pool(self):
         if self.title_in:

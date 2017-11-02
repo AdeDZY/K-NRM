@@ -60,9 +60,9 @@ class Knrm(ClickNN):
 
         self.mus = Knrm.kernal_mus(self.n_bins, use_exact=True)
         self.sigmas = Knrm.kernel_sigmas(self.n_bins, self.lamb, use_exact=True)
-        print self.sigmas
+        print "kernel sigma values: ", self.sigmas
 
-        print self.emb_in
+        print "trying to load initial embeddings from:  ", self.emb_in
         if self.emb_in != 'None':
             self.emb = self.load_word2vec(self.emb_in)
             self.embeddings = tf.Variable(tf.constant(self.emb, dtype='float32', shape=[self.vocabulary_size + 1, self.embedding_size]))
@@ -162,7 +162,7 @@ class Knrm(ClickNN):
                 variable_parametes *= dim.value
             #print(variable_parametes)
             total_parameters += variable_parametes
-        print(total_parameters)
+        print "total number of parameters:", total_parameters
 
         # return some mid result and final matching score.
         return (sim, feats_flat), o
