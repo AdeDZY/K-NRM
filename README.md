@@ -74,13 +74,13 @@ Example: `177,705,632  \t   177,705,632,-1,2452,6,98`
 ---
 
 **Model Configurations**
-- <code>ClickNN.n_bins</code>: number of kernels (soft bins) (Default: 11)
-- <code>KNRM.lamb</code>: defines the guassian kernels' sigma value. sigma = lamb * bin_size (Default:0.5 -> sigma=0.1)
-- <code>ClickNN.embedding_size</code>: embedding dimension (Default: 300)
-- <code>ClickNN.max_q_len</code>: max query length (Default: 10)
-- <code>ClickNN.max_d_len</code>: max document length (Default: 50)
-- <code>ClickDataGenerator.max_q_len</code>: max query length. Should be the same as <code>ClickNN.max_q_len</code> (Default: 10)
-- <code>ClickDataGenerator.max_d_len</code>: max query length. Should be the same as <code>ClickNN.max_d_len</code> (Default: 50)
+- <code>ClickNN.n_bins</code>: number of kernels (soft bins) (default: 11. One exact match kernel and 10 soft kernels)
+- <code>KNRM.lamb</code>: defines the guassian kernels' sigma value. sigma = lamb * bin_size (default:0.5 -> sigma=0.1)
+- <code>ClickNN.embedding_size</code>: embedding dimension (default: 300)
+- <code>ClickNN.max_q_len</code>: max query length (default: 10)
+- <code>ClickNN.max_d_len</code>: max document length (default: 50)
+- <code>ClickDataGenerator.max_q_len</code>: max query length. Should be the same as <code>ClickNN.max_q_len</code> (default: 10)
+- <code>ClickDataGenerator.max_d_len</code>: max query length. Should be the same as <code>ClickNN.max_d_len</code> (default: 50)
 - <code>ClickNN.vocabulary_size</code>: vocabulary size.
 - <code>ClickDataGenerator.vocabulary_size</code>: vocabulary size.
 
@@ -89,15 +89,15 @@ Example: `177,705,632  \t   177,705,632,-1,2452,6,98`
 **Data**
 - <code>KNRM.emb_in</code>: initial embeddings
 - <code>ClickDataGenerator.min_score_diff</code>: 
-minimum score differences between postive documents and negative ones (default=0)
+minimum score differences between postive documents and negative ones (default: 0)
 
 **Training Parameters**
-- <code>ClickNN.bath_size</code>: batch size. (Default: 16)
+- <code>ClickNN.bath_size</code>: batch size (default: 16)
 - <code>ClickNN.max_epochs</code>: max number of epochs to train
-- <code>ClickNN.eval_frequency</code>: evaluate model on validation set very this steps (Default: 10000)
-- <code>ClickNN.checkpoint_steps</code>: save model very this steps (Default: 10000)
-- <code>KNRM.learning_rate</code>: learning rate for Adam Opitmizer (Default: 0.001)
-- <code>KNRM.epsilon</code>: epsilon for Adam Optimizer (Default: 0.00001)
+- <code>ClickNN.eval_frequency</code>: evaluate model on validation set very this steps (default: 10000)
+- <code>ClickNN.checkpoint_steps</code>: save model very this steps (default: 10000)
+- <code>KNRM.learning_rate</code>: learning rate for Adam Opitmizer (default: 0.001)
+- <code>KNRM.epsilon</code>: epsilon for Adam Optimizer (default: 0.00001)
 
 ---
 If you use this code for academic purposes, please cite it as:
