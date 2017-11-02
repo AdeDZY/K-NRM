@@ -56,6 +56,10 @@ Each training sample is a tuple of (query, postive document, negative document)
 
 Example: `177,705,632   \t  177,705,632,-1,2452,6,98   \t  177,705,632,3,25,14,37,2,146,159, -1   \t    0.119048`
 
+If `score_difference < 0`, the data generator will swap postive docment and negative document.
+
+If `score_difference < lickDataGenerator.min_score_diff`, this training sample will be omitted.
+
 **Testing Data Format**
 
 Each testing sample is a tuple of (query, document)
