@@ -116,7 +116,7 @@ minimum score differences between postive documents and negative ones (default: 
 
 Efficiency
 ---
-In training, it takes about 60ms to preprocess a batch on a single-GPU machine with the following settings:
+During training, it takes about 60ms to process one batch on a single-GPU machine with the following settings:
 - batch size: 16
 - max_q_len: 10
 - max_d_len: 50
