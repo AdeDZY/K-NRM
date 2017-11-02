@@ -1,5 +1,5 @@
 # K-NRM
-This is the implementation of the paper [End-to-End Neural Ad-hoc Ranking with Kernel Pooling](http://www.cs.cmu.edu/~zhuyund/papers/end-end-neural.pdf).
+This is the implementation of the Kernel-based Neural Ranking Model (K-NRM) model from paper [End-to-End Neural Ad-hoc Ranking with Kernel Pooling](http://www.cs.cmu.edu/~zhuyund/papers/end-end-neural.pdf).
 
 <p align="center"> 
 <img src="https://github.com/AdeDZY/K-NRM/blob/master/model_simplified-1.png" width="400" align="center">
@@ -123,6 +123,12 @@ In training, it takes about 60ms to preprocess a batch on a single-GPU machine w
 - vocabulary_size: 300K
 
 Smaller vocabulary and shorter documents accelerate the training.
+
+### Click2Vec
+---
+We also provide the click2vec model as described in our paper.
+- <code>./deeplearning4ir/click2vec/generate_click_term_pair.py</code>: generate <query_term, clicked_title_term> pairs
+- <code>./deeplearning4ir/click2vec/run_word2vec.sh</code>: call Google's word2vec tool to train click2vec.
 
 ### Cite the paper
 ---
