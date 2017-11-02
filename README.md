@@ -17,9 +17,11 @@ ACM. 2017.
 
 ### Requirements
 ---
-- Tensorflow 0.12
+- Tensorflow 0.12 
 - Numpy
 - traitlets
+
+Coming soon: K-NRM with Tensorflow 1.0
 
 ### Guide To Use
 ---
