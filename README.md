@@ -25,11 +25,11 @@ ACM. 2017.
 ---
 **Configure**: first, configure the model through the config file. Configurable parameters are listed [here](#configurations)
 
-[Sample config](https://github.com/AdeDZY/K-NRM/blob/master/sogou.knrm.config)
+[sample.config](https://github.com/AdeDZY/K-NRM/blob/master/sample.config)
 
 **Training** : pass the config file, training data and validation data as
 ```ruby
-python ./deeplearning4ir/clicknn/knrm.py config-file\
+python ./knrm/model/knrm.py config-file\
     --train \
     --train_file: path to training data\
     --validation_file: path to validation data\
@@ -38,11 +38,11 @@ python ./deeplearning4ir/clicknn/knrm.py config-file\
     --load_model: True or False. Start with a new model or continue training
 ```
 
-[Sample shell scripts](https://github.com/AdeDZY/K-NRM/blob/master/train-sogou-knrm.sh)
+[sample-train.sh](https://github.com/AdeDZY/K-NRM/blob/master/sample-train.sh)
 
 **Testing**: pass the config file and testing data as
 ```ruby
-python ./deeplearning4ir/clicknn/knrm.py config-file\
+python ./knrm/model/knrm.py config-file\
     --test \
     --test_file: path to testing data\
     --test_size: size of testing data (number of testing samples)\
@@ -53,7 +53,7 @@ python ./deeplearning4ir/clicknn/knrm.py config-file\
 Relevance scores will be output to output_score_file, one score per line, in the same order as test_file.
 We provide a script to convert scores into trec format.
 ```ruby
-./tools/gen_trec_from_score.py
+./knrm/tools/gen_trec_from_score.py
 ```
 
 ### Data Preperation
@@ -89,30 +89,30 @@ Example: `177,705,632  \t   177,705,632,-1,2452,6,98`
 ---
 
 **Model Configurations**
-- <code>ClickNN.n_bins</code>: number of kernels (soft bins) (default: 11. One exact match kernel and 10 soft kernels)
-- <code>KNRM.lamb</code>: defines the guassian kernels' sigma value. sigma = lamb * bin_size (default:0.5 -> sigma=0.1)
-- <code>ClickNN.embedding_size</code>: embedding dimension (default: 300)
-- <code>ClickNN.max_q_len</code>: max query length (default: 10)
-- <code>ClickNN.max_d_len</code>: max document length (default: 50)
-- <code>ClickDataGenerator.max_q_len</code>: max query length. Should be the same as <code>ClickNN.max_q_len</code> (default: 10)
-- <code>ClickDataGenerator.max_d_len</code>: max query length. Should be the same as <code>ClickNN.max_d_len</code> (default: 50)
-- <code>ClickNN.vocabulary_size</code>: vocabulary size.
-- <code>ClickDataGenerator.vocabulary_size</code>: vocabulary size.
+- <code>BaseNN.n_bins</code>: number of kernels (soft bins) (default: 11. One exact match kernel and 10 soft kernels)
+- <code>Knrm.lamb</code>: defines the guassian kernels' sigma value. sigma = lamb * bin_size (default:0.5 -> sigma=0.1)
+- <code>BaseNN.embedding_size</code>: embedding dimension (default: 300)
+- <code>BaseNN.max_q_len</code>: max query length (default: 10)
+- <code>BaseNN.max_d_len</code>: max document length (default: 50)
+- <code>DataGenerator.max_q_len</code>: max query length. Should be the same as <code>BaseNN.max_q_len</code> (default: 10)
+- <code>DataGenerator.max_d_len</code>: max query length. Should be the same as <code>BaseNN.max_d_len</code> (default: 50)
+- <code>BaseNN.vocabulary_size</code>: vocabulary size.
+- <code>DataGenerator.vocabulary_size</code>: vocabulary size.
 
 
 
 **Data**
-- <code>KNRM.emb_in</code>: initial embeddings
-- <code>ClickDataGenerator.min_score_diff</code>: 
+- <code>Knrm.emb_in</code>: initial embeddings
+- <code>DataGenerator.min_score_diff</code>: 
 minimum score differences between postive documents and negative ones (default: 0)
 
 **Training Parameters**
-- <code>ClickNN.bath_size</code>: batch size (default: 16)
-- <code>ClickNN.max_epochs</code>: max number of epochs to train
-- <code>ClickNN.eval_frequency</code>: evaluate model on validation set very this steps (default: 1000)
-- <code>ClickNN.checkpoint_steps</code>: save model very this steps (default: 10000)
-- <code>KNRM.learning_rate</code>: learning rate for Adam Opitmizer (default: 0.001)
-- <code>KNRM.epsilon</code>: epsilon for Adam Optimizer (default: 0.00001)
+- <code>BaseNN.bath_size</code>: batch size (default: 16)
+- <code>BaseNN.max_epochs</code>: max number of epochs to train
+- <code>BaseNN.eval_frequency</code>: evaluate model on validation set very this steps (default: 1000)
+- <code>BaseNN.checkpoint_steps</code>: save model very this steps (default: 10000)
+- <code>Knrm.learning_rate</code>: learning rate for Adam Opitmizer (default: 0.001)
+- <code>Knrm.epsilon</code>: epsilon for Adam Optimizer (default: 0.00001)
 
 Efficiency
 ---
@@ -127,8 +127,8 @@ Smaller vocabulary and shorter documents accelerate the training.
 ### Click2Vec
 ---
 We also provide the click2vec model as described in our paper.
-- <code>./deeplearning4ir/click2vec/generate_click_term_pair.py</code>: generate <query_term, clicked_title_term> pairs
-- <code>./deeplearning4ir/click2vec/run_word2vec.sh</code>: call Google's word2vec tool to train click2vec.
+- <code>./knrm/click2vec/generate_click_term_pair.py</code>: generate <query_term, clicked_title_term> pairs
+- <code>./knrm/click2vec/run_word2vec.sh</code>: call Google's word2vec tool to train click2vec.
 
 ### Cite the paper
 ---
