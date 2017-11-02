@@ -10,11 +10,11 @@ This is the implementation of the paper [End-to-End Neural Ad-hoc Ranking with K
 
 ### Guide To Use
 ---
-First, configure the model through the config file. 
+First, configure the model through the config file. Configurable parameter are listed [here](#Configurations)
 
 [Sample config](https://github.com/AdeDZY/KNRM/blob/master/sogou.knrm.config)
 
-Training: pass the config file, training and validation data to
+**Training**: pass the config file, training data and validation data as
 ```ruby
 python ./deeplearning4ir/clicknn/knrm.py config-file\
     --train \
@@ -27,7 +27,7 @@ python ./deeplearning4ir/clicknn/knrm.py config-file\
 
 [Sample shell scripts](https://github.com/AdeDZY/KNRM/blob/master/train-sogou-knrm.sh)
 
-Testing: pass the config file and testing data to:
+**Testing**: pass the config file and testing data as
 ```ruby
 python ./deeplearning4ir/clicknn/knrm.py config-file\
     --test \
@@ -45,7 +45,8 @@ python ./tools/gen_trec_from_score
 
 ### Data Preperation
 ---
-1. All queries and documents should be hashed into sequences of integer term ids. -1 indicates OOV or non-existence.
+1. All queries and documents should be hashed into sequences of integer term ids. 
+-1 indicates OOV or non-existence. Term ids are sepereated by `,`
 
 2. Each training sample is a tuple of (query, postive document, negative documents)
 3. Each testing sample is a tuple of (query, document)
@@ -59,7 +60,7 @@ query   \t postive_document   \t negative_document  \t score_difference
 
 **Testing**
 
-q           tab document
+q   \t document
 
 177,705,632  \t   177,705,632,-1,2452,6,98
 
