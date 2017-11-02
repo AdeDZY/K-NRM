@@ -103,11 +103,12 @@ minimum score differences between postive documents and negative ones (default: 
 
 Efficiency
 ---
-In training, it takes about 60ms to preprocess a batch of on a GPU machine with the following settings:
+In training, it takes about 60ms to preprocess a batch of on a single-GPU machine with the following settings:
 - batch size: 16
 - max_q_len: 10
 - max_d_len: 50
 - vocabulary_size: 300K
+
 Smaller vocabulary and shorter documents accelerate the training.
 
 ---
