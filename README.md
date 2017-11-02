@@ -10,7 +10,7 @@ This is the implementation of the paper [End-to-End Neural Ad-hoc Ranking with K
 
 ### Guide To Use
 ---
-First, configure the model through the config file. Configurable parameter are listed [here](#Configurations)
+First, configure the model through the config file. Configurable parameter are listed [here](#configurations)
 
 [Sample config](https://github.com/AdeDZY/KNRM/blob/master/sogou.knrm.config)
 
