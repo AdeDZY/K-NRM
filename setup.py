@@ -30,9 +30,9 @@ from setuptools import setup
 from setuptools import find_packages
 
 
-setup(name='k_nrm',
+setup(name='knrm',
       version='0',
-      description='k_nrm',
+      description='knrm',
       author='Zhuyun Dai and Chenyan Xiong',
       install_requires=['numpy', 'traitlets', 'tensorflow'],
       packages=find_packages()
