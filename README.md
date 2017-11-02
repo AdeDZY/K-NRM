@@ -135,7 +135,9 @@ We also provide the click2vec model as described in our paper.
 If you use this code for your scientific work, please cite it as:
 
 ```
-C. Xiong, Z. Dai, J. Callan, Z. Liu, and R. Power. End-to-end neural ad-hoc ranking with kernel pooling. In Proceedings of the 40th International ACM SIGIR Conference on Research & Development in Information Retrieval. ACM. 2017.
+C. Xiong, Z. Dai, J. Callan, Z. Liu, and R. Power. End-to-end neural ad-hoc ranking with kernel pooling. 
+In Proceedings of the 40th International ACM SIGIR Conference on Research & Development in Information Retrieval. 
+ACM. 2017.
 ```
 
 ```
