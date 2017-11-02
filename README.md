@@ -1,8 +1,6 @@
 # K-NRM
 ---
-This is the impelmentation of the paper [End-to-End Neural Ad-hoc Ranking with Kernel Pooling](http://www.cs.cmu.edu/~zhuyund/papers/end-end-neural.pdf).
-
-Authors:
+This is the implementation of the paper [End-to-End Neural Ad-hoc Ranking with Kernel Pooling](http://www.cs.cmu.edu/~zhuyund/papers/end-end-neural.pdf).
 
 ### Requirements
 ---
