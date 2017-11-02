@@ -20,6 +20,8 @@ ACM. 2017.
 
 ### Guide To Use
 ---
+**Configure**
+
 First, configure the model through the config file. Configurable parameter are listed [here](#configurations)
 
 [Sample config](https://github.com/AdeDZY/K-NRM/blob/master/sogou.knrm.config)
@@ -48,14 +50,14 @@ python ./deeplearning4ir/clicknn/knrm.py config-file\
 
 ```
 Relevance scores will be output to output_score_file, one score per line, in the same order as test_file.
-We provide tools to convert score into trec format in.
+We provide a script to convert scores into trec format.
 ```ruby
 ./tools/gen_trec_from_score.py
 ```
 
 ### Data Preperation
 ---
-All queries and documents should be hashed into sequences of integer term ids. 
+All queries and documents must be hashed into sequences of integer term ids. Term id starts with 1.
 -1 indicates OOV or non-existence. Term ids are sepereated by `,`
 
 **Training Data Format**
