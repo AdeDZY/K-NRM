@@ -50,7 +50,7 @@ python ./deeplearning4ir/clicknn/knrm.py config-file\
 Relevance scores will be output to output_score_file, one score per line, in the same order as test_file.
 We provide tools to convert score into trec format in.
 ```ruby
-python ./tools/gen_trec_from_score
+./tools/gen_trec_from_score.py
 ```
 
 ### Data Preperation
