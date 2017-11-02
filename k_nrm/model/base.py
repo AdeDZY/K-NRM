@@ -57,9 +57,9 @@ class BaseNN(Configurable):
         super(BaseNN, self).__init__(**kwargs)
 
         # generator
-        self.data_generator = ClickDataGenerator(config=self.config)
-        self.val_data_generator = ClickDataGenerator(config=self.config)
-        self.test_data_generator = ClickDataGenerator(config=self.config)
+        self.data_generator = DataGenerator(config=self.config)
+        self.val_data_generator = DataGenerator(config=self.config)
+        self.test_data_generator = DataGenerator(config=self.config)
 
     @staticmethod
     def kernal_mus(n_kernels, use_exact):
