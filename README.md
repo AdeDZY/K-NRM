@@ -45,24 +45,24 @@ python ./tools/gen_trec_from_score
 
 ### Data Preperation
 ---
-1. All queries and documents should be hashed into sequences of integer term ids. 
+All queries and documents should be hashed into sequences of integer term ids. 
 -1 indicates OOV or non-existence. Term ids are sepereated by `,`
 
-2. Each training sample is a tuple of (query, postive document, negative documents)
-3. Each testing sample is a tuple of (query, document)
+**Training Data Format**
 
+Each training sample is a tuple of (query, postive document, negative document)
 
-**Training**
+`query   \t postive_document   \t negative_document  \t score_difference `
 
-query   \t postive_document   \t negative_document  \t score_difference 
+Example: `177,705,632   \t  177,705,632,-1,2452,6,98   \t  177,705,632,3,25,14,37,2,146,159, -1   \t    0.119048`
 
-177,705,632   \t  177,705,632,-1,2452,6,98   \t  177,705,632,3,25,14,37,2,146,159, -1   \t    0.119048
+**Testing Data Format**
 
-**Testing**
+Each testing sample is a tuple of (query, document)
 
-q   \t document
+`q   \t document`
 
-177,705,632  \t   177,705,632,-1,2452,6,98
+Example: `177,705,632  \t   177,705,632,-1,2452,6,98`
 
 
 
