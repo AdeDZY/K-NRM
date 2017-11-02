@@ -28,7 +28,7 @@
 
 import tensorflow as tf
 import numpy as np
-from k_nrm.data import DataGenerator
+from knrm.data import DataGenerator
 from traitlets.config import Configurable
 from traitlets import (
     Int,

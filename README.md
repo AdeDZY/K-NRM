@@ -29,7 +29,7 @@ ACM. 2017.
 
 **Training** : pass the config file, training data and validation data as
 ```ruby
-python ./knrm/model/knrm.py config-file\
+python ./knrm/model/model_knrm.py config-file\
     --train \
     --train_file: path to training data\
     --validation_file: path to validation data\
@@ -42,7 +42,7 @@ python ./knrm/model/knrm.py config-file\
 
 **Testing**: pass the config file and testing data as
 ```ruby
-python ./knrm/model/knrm.py config-file\
+python ./knrm/model/model_knrm.py config-file\
     --test \
     --test_file: path to testing data\
     --test_size: size of testing data (number of testing samples)\
