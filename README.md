@@ -45,30 +45,30 @@ python ./tools/gen_trec_from_score
 
 ### Data Preperation
 ---
-1. All queries and documents should be hashed into sequences of integer term ids.
+1. All queries and documents should be hashed into sequences of integer term ids. -1 indicates OOV or non-existence.
+
 2. Each training sample is a tuple of (query, postive document, negative documents)
 3. Each testing sample is a tuple of (query, document)
 
 
-Training:
+**Training**
 
 query   \t postive_document   \t negative_document  \t score_difference 
 
 177,705,632   \t  177,705,632,-1,2452,6,98   \t  177,705,632,3,25,14,37,2,146,159, -1   \t    0.119048
 
-Testing:
+**Testing**
 
 q           tab document
 
 177,705,632  \t   177,705,632,-1,2452,6,98
 
--1 indicate OOV or non-existence.
 
 
 ### Configurations 
 ---
 
-Model Configurations:
+**Model Configurations**
 - <code>ClickNN.n_bins</code>: number of kernels (soft bins) (Default: 11)
 - <code>KNRM.lamb</code>: defines the guassian kernels' sigma value. sigma = lamb * bin_size (Default:0.5 -> sigma=0.1)
 - <code>ClickNN.embedding_size</code>: embedding dimension (Default: 300)
@@ -81,18 +81,18 @@ Model Configurations:
 
 
 
-Data:
+**Data**
 - <code>KNRM.emb_in</code>: initial embeddings
 - <code>ClickDataGenerator.min_score_diff</code>: 
 minimum score differences between postive documents and negative ones (default=0)
 
-Training Parameters:
+**Training Parameters**
 - <code>ClickNN.bath_size</code>: batch size. (Default: 16)
 - <code>ClickNN.max_epochs</code>: max number of epochs to train
 - <code>ClickNN.eval_frequency</code>: evaluate model on validation set very this steps (Default: 10000)
-- <code>checkpoint_steps</code>: save model very this steps (Default: 10000)
-- <code>learning_rate</code>: learning rate for Adam Opitmizer (Default: 0.001)
-- <code>epsilon</code>: epsilon for Adam Optimizer (Default: 0.00001)
+- <code>ClickNN.checkpoint_steps</code>: save model very this steps (Default: 10000)
+- <code>KNRM.learning_rate</code>: learning rate for Adam Opitmizer (Default: 0.001)
+- <code>KNRM.epsilon</code>: epsilon for Adam Optimizer (Default: 0.00001)
 
 ---
 If you use this code for academic purposes, please cite it as:
