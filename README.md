@@ -60,6 +60,8 @@ If `score_difference < 0`, the data generator will swap postive docment and nega
 
 If `score_difference < lickDataGenerator.min_score_diff`, this training sample will be omitted.
 
+We recommend shuffling the training samples to ease model convergence. 
+
 **Testing Data Format**
 
 Each testing sample is a tuple of (query, document)
