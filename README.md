@@ -143,7 +143,7 @@ C. Xiong, Z. Dai, J. Callan, Z. Liu, and R. Power. End-to-end neural ad-hoc rank
   author          = {{Xiong}, Chenyan and {Dai}, Zhuyun and {Callan}, Jamie and {Liu}, Zhiyuan and {Power}, Russell},
   title           = "{End-to-End Neural Ad-hoc Ranking with Kernel Pooling}",
   booktitle       = {Proceedings of the 40th International ACM SIGIR Conference on Research & Development in Information Retrieval},
-  organization    = {Association for Computational Linguistics},
+  organization    = {ACM},
   year            = 2017,
 }
 ```

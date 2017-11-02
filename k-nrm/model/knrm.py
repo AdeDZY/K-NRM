@@ -40,7 +40,7 @@ import sys
 import time
 import argparse
 from traitlets.config.loader import PyFileConfigLoader
-from deeplearning4ir.clicknn import ClickNN
+from deeplearning4ir.model import ClickNN
 
 
 reload(sys)

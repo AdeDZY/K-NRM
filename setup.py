@@ -30,7 +30,7 @@ from setuptools import setup
 from setuptools import find_packages
 
 
-setup(name='deeplearning4ir',
+setup(name='k-nrm',
       version='0',
       description='k-nrm',
       author='Zhuyun Dai and Chenyan Xiong',
