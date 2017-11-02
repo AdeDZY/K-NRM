@@ -96,10 +96,19 @@ minimum score differences between postive documents and negative ones (default: 
 **Training Parameters**
 - <code>ClickNN.bath_size</code>: batch size (default: 16)
 - <code>ClickNN.max_epochs</code>: max number of epochs to train
-- <code>ClickNN.eval_frequency</code>: evaluate model on validation set very this steps (default: 10000)
+- <code>ClickNN.eval_frequency</code>: evaluate model on validation set very this steps (default: 1000)
 - <code>ClickNN.checkpoint_steps</code>: save model very this steps (default: 10000)
 - <code>KNRM.learning_rate</code>: learning rate for Adam Opitmizer (default: 0.001)
 - <code>KNRM.epsilon</code>: epsilon for Adam Optimizer (default: 0.00001)
+
+Efficiency
+---
+In training, it takes about 60ms to preprocess a batch of on a GPU machine with the following settings:
+- batch size: 16
+- max_q_len: 10
+- max_d_len: 50
+- vocabulary_size: 300K
+Smaller vocabulary and shorter documents accelerate the training.
 
 ---
 If you use this code for academic purposes, please cite it as:
