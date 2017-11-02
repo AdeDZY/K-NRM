@@ -73,7 +73,7 @@ TBA
 If you use this code for academic purposes, please cite it as:
 
 ```
-@ARTICLE{Britz:2017,
+@ARTICLE{Xiong2017,
   author          = {{Xiong}, Chenyan and {Dai}, Zhuyun and {Callan}, Jamie and {Liu}, Zhiyuan and {Power}, Russell},
   title           = "{End-to-End Neural Ad-hoc Ranking with Kernel Pooling}",
   booktitle       = {Proceedings of the 40th International ACM SIGIR Conference on Research & Development in Information Retrieval},
