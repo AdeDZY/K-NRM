@@ -4,7 +4,9 @@ This is the impelmentation of the paper [End-to-End Neural Ad-hoc Ranking with K
 
 ### Requirements
 ---
-Tensorflow 0.12.1
+Tensorflow 0.12
+Numpy
+traitlets
 
 ### Guide To Use
 ---
@@ -67,7 +69,18 @@ q           tab document
 ---
 TBA
 
+---
+If you use this code for academic purposes, please cite it as:
 
+```
+@ARTICLE{Britz:2017,
+  author          = {{Xiong}, Chenyan and {Dai}, Zhuyun and {Callan}, Jamie and {Liu}, Zhiyuan and {Power}, Russell},
+  title           = "{End-to-End Neural Ad-hoc Ranking with Kernel Pooling}",
+  booktitle       = {Proceedings of the 40th International ACM SIGIR Conference on Research & Development in Information Retrieval},
+  organization    = {Association for Computational Linguistics}
+  year            = 2017,
+}
+```
 
 
 
