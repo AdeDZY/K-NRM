@@ -32,7 +32,8 @@ from setuptools import find_packages
 
 setup(name='deeplearning4ir',
       version='0',
-      description='deep learning for IR',
+      description='k-nrm',
+      author='Zhuyun Dai and Chenyan Xiong'
       install_requires=['numpy', 'traitlets', 'tensorflow'],
       packages=find_packages()
       )
