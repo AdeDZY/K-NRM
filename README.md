@@ -12,7 +12,7 @@ This is the implementation of the paper [End-to-End Neural Ad-hoc Ranking with K
 ---
 First, configure the model through the config file. Configurable parameter are listed [here](#configurations)
 
-[Sample config](https://github.com/AdeDZY/KNRM/blob/master/sogou.knrm.config)
+[Sample config](https://github.com/AdeDZY/K-NRM/blob/master/sogou.knrm.config)
 
 **Training**: pass the config file, training data and validation data as
 ```ruby
@@ -25,7 +25,7 @@ python ./deeplearning4ir/clicknn/knrm.py config-file\
     --load_model: True or False. Start with a new model or continue training
 ```
 
-[Sample shell scripts](https://github.com/AdeDZY/KNRM/blob/master/train-sogou-knrm.sh)
+[Sample shell scripts](https://github.com/AdeDZY/K-NRM/blob/master/train-sogou-knrm.sh)
 
 **Testing**: pass the config file and testing data as
 ```ruby
