@@ -4,9 +4,9 @@ This is the implementation of the paper [End-to-End Neural Ad-hoc Ranking with K
 
 ### Requirements
 ---
-Tensorflow 0.12
-Numpy
-traitlets
+- Tensorflow 0.12
+- Numpy
+- traitlets
 
 ### Guide To Use
 ---
