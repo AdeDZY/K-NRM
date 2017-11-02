@@ -67,7 +67,32 @@ q           tab document
 
 ### Configurations 
 ---
-TBA
+
+Model Configurations:
+- <code>ClickNN.n_bins</code>: number of kernels (soft bins) (Default: 11)
+- <code>KNRM.lamb</code>: defines the guassian kernels' sigma value. sigma = lamb * bin_size (Default:0.5 -> sigma=0.1)
+- <code>ClickNN.embedding_size</code>: embedding dimension (Default: 300)
+- <code>ClickNN.max_q_len</code>: max query length (Default: 10)
+- <code>ClickNN.max_d_len</code>: max document length (Default: 50)
+- <code>ClickDataGenerator.max_q_len</code>: max query length. Should be the same as <code>ClickNN.max_q_len</code> (Default: 10)
+- <code>ClickDataGenerator.max_d_len</code>: max query length. Should be the same as <code>ClickNN.max_d_len</code> (Default: 50)
+- <code>ClickNN.vocabulary_size</code>: vocabulary size.
+- <code>ClickDataGenerator.vocabulary_size</code>: vocabulary size.
+
+
+
+Data:
+- <code>KNRM.emb_in</code>: initial embeddings
+- <code>ClickDataGenerator.min_score_diff</code>: 
+minimum score differences between postive documents and negative ones (default=0)
+
+Training Parameters:
+- <code>ClickNN.bath_size</code>: batch size. (Default: 16)
+- <code>ClickNN.max_epochs</code>: max number of epochs to train
+- <code>ClickNN.eval_frequency</code>: evaluate model on validation set very this steps (Default: 10000)
+- <code>checkpoint_steps</code>: save model very this steps (Default: 10000)
+- <code>learning_rate</code>: learning rate for Adam Opitmizer (Default: 0.001)
+- <code>epsilon</code>: epsilon for Adam Optimizer (Default: 0.00001)
 
 ---
 If you use this code for academic purposes, please cite it as:

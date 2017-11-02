@@ -46,10 +46,10 @@ class ClickNN(Configurable):
     n_bins = Int(11, help="number of kernels (including exact match)").tag(config=True)
     max_q_len = Int(10, help='max q len').tag(config=True)
     max_d_len = Int(50, help='max document len').tag(config=True)
-    batch_size = Int(10, help="minibatch size").tag(config=True)
+    batch_size = Int(16, help="minibatch size").tag(config=True)
     max_epochs = Float(10, help="maximum number of epochs").tag(config=True)
-    eval_frequency = Int(100, help="print out minibatch every * steps").tag(config=True)
-    checkpoint_steps = Int(500, help="stroe trained data every * steps").tag(config=True)
+    eval_frequency = Int(10000, help="print out minibatch every * steps").tag(config=True)
+    checkpoint_steps = Int(10000, help="stroe trained data every * steps").tag(config=True)
     embedding_size = Int(300, help="embedding dimension").tag(config=True)
     vocabulary_size = Int(2000000, help="vocabulary size").tag(config=True)
 
