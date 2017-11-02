@@ -63,7 +63,7 @@ reload(sys)
 sys.setdefaultencoding('UTF8')
 
 
-class ClickDataGenerator(Configurable):
+class DataGenerator(Configurable):
     title_in = Unicode('/bos/data1/sogou16/data/training/1m_title.pad_t50',
                        help='titles term id csv, must be padded').tag(config=True)
     max_q_len = Int(10, help='max q len').tag(config=True)
@@ -78,7 +78,7 @@ class ClickDataGenerator(Configurable):
     vocabulary_size = Int(2000000).tag(config=True)
 
     def __init__(self, **kwargs):
-        super(ClickDataGenerator, self).__init__(**kwargs)
+        super(DataGenerator, self).__init__(**kwargs)
         self.m_title_pool = np.array(None)
         if self.load_litle_pool and self.neg_sample:
             self._load_title_pool()
@@ -259,10 +259,10 @@ if __name__ == '__main__':
     if 4 != len(sys.argv):
         print "I test generator"
         print "3 para: config + click pair with int term + batch_size"
-        ClickDataGenerator.class_print_help()
+        DataGenerator.class_print_help()
         sys.exit(-1)
     conf = load_py_config(sys.argv[1])
-    generator = ClickDataGenerator(config=conf)
+    generator = DataGenerator(config=conf)
 
     pair_stream = open(sys.argv[2])
     batch_size = int(sys.argv[3])

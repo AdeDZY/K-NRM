@@ -42,7 +42,7 @@ reload(sys)
 sys.setdefaultencoding('UTF8')
 
 
-class ClickNN(Configurable):
+class BaseNN(Configurable):
     n_bins = Int(11, help="number of kernels (including exact match)").tag(config=True)
     max_q_len = Int(10, help='max q len').tag(config=True)
     max_d_len = Int(50, help='max document len').tag(config=True)
@@ -54,7 +54,7 @@ class ClickNN(Configurable):
     vocabulary_size = Int(2000000, help="vocabulary size").tag(config=True)
 
     def __init__(self, **kwargs):
-        super(ClickNN, self).__init__(**kwargs)
+        super(BaseNN, self).__init__(**kwargs)
 
         # generator
         self.data_generator = ClickDataGenerator(config=self.config)

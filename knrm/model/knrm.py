@@ -28,7 +28,7 @@
 
 import tensorflow as tf
 import numpy as np
-from deeplearning4ir.data import ClickDataGenerator
+from knrm.data import DataGenerator
 from traitlets.config import Configurable
 from traitlets import (
     Int,
@@ -40,14 +40,14 @@ import sys
 import time
 import argparse
 from traitlets.config.loader import PyFileConfigLoader
-from deeplearning4ir.model import ClickNN
+from knrm.model import BaseNN
 
 
 reload(sys)
 sys.setdefaultencoding('UTF8')
 
 
-class Knrm(ClickNN):
+class Knrm(BaseNN):
     neg_sample = 1
 
     lamb = Float(0.5, help="guassian_sigma = lamb * bin_size").tag(config=True)
