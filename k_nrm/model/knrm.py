@@ -28,7 +28,7 @@
 
 import tensorflow as tf
 import numpy as np
-from knrm.data import DataGenerator
+from k_nrm.data import DataGenerator
 from traitlets.config import Configurable
 from traitlets import (
     Int,
@@ -40,7 +40,7 @@ import sys
 import time
 import argparse
 from traitlets.config.loader import PyFileConfigLoader
-from knrm.model import BaseNN
+from k_nrm.model import BaseNN
 
 
 reload(sys)

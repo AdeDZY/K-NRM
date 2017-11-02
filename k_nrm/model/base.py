@@ -28,7 +28,7 @@
 
 import tensorflow as tf
 import numpy as np
-from deeplearning4ir.data import ClickDataGenerator
+from k_nrm.data import DataGenerator
 from traitlets.config import Configurable
 from traitlets import (
     Int,
