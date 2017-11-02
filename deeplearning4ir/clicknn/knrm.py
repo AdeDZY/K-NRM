@@ -219,15 +219,15 @@ class Knrm(ClickNN):
 
             # Run all the initializers to prepare the trainable parameters.
             if not load_model:
-                print "Initialize variables..."
+                print "Initializing a new model..."
                 tf.initialize_all_variables().run()
-                print('Initialized!')
+                print('New model initialized!')
 
             else:
                 ckpt = tf.train.get_checkpoint_state(checkpoint_dir)
                 if ckpt and ckpt.model_checkpoint_path:
                     saver.restore(sess, ckpt.model_checkpoint_path)
-                    print "data loaded!"
+                    print "model loaded!"
                 else:
                     print "no data found"
                     exit(-1)
